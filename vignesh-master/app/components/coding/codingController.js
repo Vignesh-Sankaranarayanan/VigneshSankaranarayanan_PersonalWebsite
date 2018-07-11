@@ -9,7 +9,7 @@ app.controller('codingController', function($scope, $http, $log) {
         itemName: 'project'
     });
 
-    var ignored_repos = ["Blog", "Oh my zsh", "Awesome options", "Originpy", "PantherBot"];
+    var ignored_repos = [];
 
     Project.all($http, $scope.page, function (projects) {
         $scope.page.items = projects.exclude(function (value) {
