@@ -9,7 +9,7 @@ app.controller('codingController', function($scope, $http, $log) {
         itemName: 'project'
     });
 
-    var ignored_repos = [];
+    var ignored_repos = ['BurgerBuilder', 'Sample', 'Webhook', 'WebhookApi', 'Quickstart ios', 'Geethamandalam',  'Ionic preview app',  'Php github api',  'Tools', 'Ionic2 slides test', 'M3uStreamPlayer'];
 
     Project.all($http, $scope.page, function (projects) {
         $scope.page.items = projects.exclude(function (value) {
