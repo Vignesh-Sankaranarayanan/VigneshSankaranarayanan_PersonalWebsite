@@ -27,7 +27,10 @@ var Url = function (url, icon) {
 var Project = function (title, description, language, urls) {
 
     this.title = title.replace(/[-_]/g, ' ').capitalize();
+    if(this.description!=null)
     this.description = description.endWith('.');
+    else
+    this.description = "";
     this.language = language;
     this.urls = urls || [];
 
